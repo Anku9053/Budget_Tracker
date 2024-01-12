@@ -1,0 +1,33 @@
+/* Add this to your existing CSS or create a new CSS file for your Navbar styles */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3); /* Use rgba for transparent background */
+    z-index: 3; /* Make sure this is higher than the content's z-index */
+  }
+  
+  /* If you want to hide the navbar when scrolling down and show it when scrolling up */
+  .navbar.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar.visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Example: Apply the hidden class when scrolling down and visible when scrolling up */
+  body.navbar-hidden .navbar {
+    transform: translateY(-100%);
+  }
+  
+  body.navbar-visible .navbar {
+    transform: translateY(0);
+  }
+  

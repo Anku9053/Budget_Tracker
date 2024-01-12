@@ -1,0 +1,141 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    /* scrollbar-width: none; */
+  }
+
+  /* Optional: Add scrollbar styles for Firefox */
+  .container::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 20px; /* Adjust the top padding to avoid content being hidden behind the video */
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+  }
+  
+  .scrollable-content {
+    max-height: calc(100vh - 120px);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+
+    overflow-y: auto;
+  }
+  .scrollable-content::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  .scrollable-div {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    height: 300px;
+    border: 1px solid #ddd;
+  }
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Optional: Add scrollbar styles for Firefox */
+  .container::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 20px; /* Adjust the top padding to avoid content being hidden behind the video */
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+  }
+  
+  .scrollable-content {
+    max-height: calc(100vh - 120px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    overflow-y: auto;
+  }
+  
+  .scrollable-content::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  /* Animation for elements coming from the left */
+  .scrollable-div:nth-child(odd) {
+    animation: slideInLeft 2s ease forwards;
+  }
+  
+  /* Animation for elements coming from the right */
+  .scrollable-div:nth-child(even) {
+    animation: slideInRight 2s ease forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

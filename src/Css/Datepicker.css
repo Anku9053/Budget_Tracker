@@ -1,0 +1,39 @@
+/* Custom styles for the datepicker */
+.react-datepicker {
+    font-size: 16px; /* Adjust the font size */
+  }
+  
+  .react-datepicker-wrapper {
+    display: inline-block;
+  }
+  
+  .react-datepicker__input-container {
+    width: 100%; /* Adjust the width of the input container */
+  }
+  
+  .react-datepicker__input-container input {
+    height: 40px; /* Adjust the height of the input field */
+    border-radius: 5px; /* Optional: Add border-radius for a rounded look */
+  }
+  
+  /* Adjust the height and width of the calendar pop-up */
+  .react-datepicker__portal {
+    height: 2000px !important; /* Set height to auto to allow content to determine height */
+  }
+  
+  .react-datepicker__month {
+    /* Remove margin for the month container */
+    padding: 2rem;
+  }
+  
+  .react-datepicker__month-container {
+    height: 200px; /* Set the max height of the month container */
+
+  }
+  
+  .react-datepicker__day {
+    line-height: 8rem;
+    
+    
+  }
+  
