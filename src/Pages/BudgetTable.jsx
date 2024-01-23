@@ -211,7 +211,12 @@ const BudgetTable = () => {
 
       {showEditModal && (
         <div className="edit-modal">
-          <h2>Select Fields to Edit</h2>
+          <h2>Select The  Fields You want to Edit</h2>
+          <div className='flex-div'>
+          <div>
+
+          
+          <div className='EditDiv-main'>
           <label>
             <input
               type="checkbox"
@@ -226,6 +231,8 @@ const BudgetTable = () => {
             />
             Date
           </label>
+          </div>
+          <div className='EditDiv-main'>
           <label>
             <input
               type="checkbox"
@@ -240,6 +247,8 @@ const BudgetTable = () => {
             />
             Category
           </label>
+          </div>
+          <div className='EditDiv-main'>
           <label>
             <input
               type="checkbox"
@@ -254,6 +263,11 @@ const BudgetTable = () => {
             />
             Amount
           </label>
+          </div>
+          </div> 
+
+          <div>
+          <div className='EditDiv-main'>
           <label>
             <input
               type="checkbox"
@@ -268,6 +282,8 @@ const BudgetTable = () => {
             />
             Description
           </label>
+          </div>
+          <div className='EditDiv-main'>
           <label>
             <input
               type="checkbox"
@@ -282,10 +298,16 @@ const BudgetTable = () => {
             />
             Spend Money
           </label>
+          </div>
+          </div>
+            </div>
+          <div>
+            
           <button onClick={handleEditModalClose}>Close</button>
           {selectedFields.length > 0 && (
-            <button onClick={() => handleUpdate(selectedFields[0])}>Update</button>
-          )}
+            <button onClick={() => handleUpdate(selectedFields[0])}>Edit</button>
+            )}
+            </div>
         </div>
       )}
     </div>
