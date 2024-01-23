@@ -1,4 +1,3 @@
-// Redux/reducer.js
 const initialState = {
   budgets: [],
 };
