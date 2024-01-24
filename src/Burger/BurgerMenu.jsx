@@ -14,11 +14,12 @@ const StyledMenu = styled.nav`
   height: 100vh;
   text-align: center;
   padding: 2rem;
+  /* border: 2px solid red; */
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  border-right: 1px solid white;
+  border-right: 1px solid green;
   /* overflow-y : scroll;  */
 
   @media (max-width: 576px) {
@@ -35,7 +36,7 @@ const StyledMenu = styled.nav`
     /* border: 2px solid red; */
     /* font-weight: bold; */
     /* letter-spacing: 0.5rem; */
-    color: white;
+    color: black;
     text-decoration: none;
     transition: color 0.3s linear;
 
