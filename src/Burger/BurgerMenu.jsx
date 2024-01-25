@@ -1,15 +1,24 @@
 import React, { useState ,useRef, useEffect} from "react";
 import styled from "styled-components";
-
+import {RiHome3Fill} from "react-icons/ri"
+import {CiLogin} from "react-icons/ci"
+import {SiGnuprivacyguard} from "react-icons/si"
+import {IoIosContact} from "react-icons/io"
+import {FcAbout} from "react-icons/fc"
+import {LiaBlogSolid} from "react-icons/lia"
+import {FaWpforms} from "react-icons/fa"
+import { FaHistory } from "react-icons/fa";
 const StyledMenu = styled.nav`
   display: flex;
   gap: 20px;
   align-items: center;
-  text-align: center;
+  text-align: right;
   width: 20%;
   flex-direction: column;
-  justify-content: center;
-  background: transparent;
+  --tw-bg-opacity: 1;
+    background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+  justify-content: start;
+  /* background: #f2f2f2; */
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: center;
@@ -26,17 +35,27 @@ const StyledMenu = styled.nav`
     width: 100%;
   }
 
+  span{
+    width: 20px;
+    /* border: 2px solid red; */
+    /* display: flex; */
+    flex-direction: column;
+    position: relative;
+    top: 0.2rem;
+  }
+
   a {
-    font-size: 30px;
+    font-size: 25px;
     /* text-transform: uppercase; */
-    padding-top: 1rem;
+    text-transform: capitalize;
+    padding-top: 1.3rem;
     position: relative;
     /* top: 2rem; */
     
     /* border: 2px solid red; */
     /* font-weight: bold; */
     /* letter-spacing: 0.5rem; */
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -97,53 +116,45 @@ const Menu = ({ open }) => {
             <a href="/">
 
 
-                Home
+                Home <span><RiHome3Fill /></span>
             </a>
             <a href="/">
 
-                Login
+                Login <span><CiLogin /></span>
             </a>
             <a href="/">
 
 
-                Register
-            </a>
-
-            <a href="/">
-
-
-                Contact
+                Register <span><SiGnuprivacyguard /></span>
             </a>
 
             <a href="/">
 
 
-                About
+                Contact <span><IoIosContact /></span>
             </a>
 
             <a href="/">
 
 
-                Create New
+                About <span><FcAbout /></span>
+            </a>
+
+            <a href="/Form">
+
+
+                Create New <span><FaWpforms /></span>
             </a>
 
             <a href="/">
 
 
-                History
+                History <span><FaHistory /></span>
             </a>
 
             <a href="/">
 
-                Blogs
-            </a>
-
-
-
-
-            <a href="/">
-
-                Developers
+                Blogs <span><LiaBlogSolid /></span>
             </a>
         </StyledMenu>
     );
