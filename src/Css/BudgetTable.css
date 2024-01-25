@@ -30,14 +30,15 @@
 }
 
 .EditDiv-main{
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* border: 2px solid red; */
   text-align: left;
 }
 .flex-div{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .edit-modal label {
   display: block;

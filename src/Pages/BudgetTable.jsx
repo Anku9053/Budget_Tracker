@@ -211,7 +211,7 @@ const BudgetTable = () => {
 
       {showEditModal && (
         <div className="edit-modal">
-          <h2>Select The  Fields You want to Edit</h2>
+          <p>Select Edit Fields</p>
           <div className='flex-div'>
           <div>
 
