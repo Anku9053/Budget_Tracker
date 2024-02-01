@@ -7,14 +7,20 @@ import BudgetList from './Pages/BudgetList';
 import BudgetForm from './Pages/BudgetForm';
 import AppBurger from './Burger/AppBurger';
 import MainRoutes from './Pages/MainRoutes';
+import HomePageNavBar from './Pages/HomePageNavBar';
+import Homepage from './Pages/Homepage';
+
 function App() {
 
   return (
     <div className='App'>
       {/* <MainRoutes/> */}
-      <AppBurger/>
-      <BudgetForm/>
-      <BudgetTable/>
+      {/* <AppBurger/> */}
+      {/* <BudgetForm/> */}
+      {/* <BudgetTable/> */}
+      <HomePageNavBar/>
+      {/* <Homepage/> */}
+      {/* <Slider/> */}
     </div>
   );
 }

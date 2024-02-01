@@ -1,44 +1,25 @@
 // Navbar.js
 import React from 'react';
-import styled from 'styled-components';
-
-const Nav = styled.nav`
-  background-color: #333;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Logo = styled.h1`
-  color: #fff;
-  margin: 0;
-`;
-
-const NavLinks = styled.div`
-  display: flex;
-`;
-
-const NavLink = styled.a`
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import "../Css/HomePageNavBar.css"
 
 const HomePageNavBar = () => {
   return (
-    <Nav>
-      <Logo>Budget Tracker</Logo>
-      <NavLinks>
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">Transactions</NavLink>
-        <NavLink href="#">Categories</NavLink>
+    <nav className="navbar">
+      <div className="logo">Budget Tracker</div>
+      <div className="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Transactions</a>
+        <a href="#">Categories</a>
+        <a href="#">Leaderboard</a>
         
-      </NavLinks>
-    </Nav>
+       
+      </div>
+      <div className='Login_Button'>
+          
+          <p>Login</p>
+
+        </div>
+    </nav>
   );
 };
 

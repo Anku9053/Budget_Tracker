@@ -227,3 +227,27 @@ code {
   /* border: 2px  solid red; */
   bottom: 4rem;
 }
+
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.App {
+  background: linear-gradient(45deg, #000, #333);
+  height: 100vh;
+  animation: glowingAnimation 3s infinite;
+}
+
+@keyframes glowingAnimation {
+  0% {
+    box-shadow: 0 0 10px 0px #000;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px #000;
+  }
+  100% {
+    box-shadow: 0 0 10px 0px #000;
+  }
+}
