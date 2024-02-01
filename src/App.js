@@ -20,7 +20,7 @@ function App() {
       {/* <BudgetTable/> */}
       <HomePageNavBar/>
       {/* <Homepage/> */}
-      {/* <Slider/> */}
+
     </div>
   );
 }
