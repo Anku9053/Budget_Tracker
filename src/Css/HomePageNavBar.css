@@ -1,33 +1,118 @@
-/* Add this to your existing CSS or create a new CSS file for your Navbar styles */
+/* App.css */
+/* ... existing styles ... */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px; */
+  margin-top: 3.5rem;
+  /* border: 2px solid red; */
+  color: #fff;
+  text-transform: capitalize;
+  background-color: none;
+  background-color: rgba(34, 32, 32, 0); 
+  backdrop-filter: blur(8px);
+  opacity: 1;
+  width: 100%;
+  z-index: 5;
+  /* background-color: white; */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+a{
+font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    /* padding-top: 1rem; */
+    margin-right: 2rem;
+    text-decoration: none;
+
+    position: relative;
+    /* top: 2rem; */
+    left: 13rem;
+    /* border: 2px solid red; */
+    /* font-weight: bold; */
+    /* letter-spacing: 0.5rem; */
     color: white;
-    background-color: rgba(0, 0, 0, 0.3); /* Use rgba for transparent background */
-    z-index: 3; /* Make sure this is higher than the content's z-index */
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      color: yellow;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      width: 100%;
+    }
   }
-  
-  /* If you want to hide the navbar when scrolling down and show it when scrolling up */
-  .navbar.hidden {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+
+
+  .Login_Button{
+    /* background-color: black; */
+    /* color: black; */
+    position: relative;
+    right: 2rem;
+    /* border: 1px solid red; */
   }
-  
-  .navbar.visible {
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out;
+  p{
+    width: 100%;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   text-transform: uppercase;
+
+    /* border: 2px solid red; */
+    border: none;
+    border-radius: 10px;
+    font-size: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-right: 6rem;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(85.8452deg, rgb(212, 249, 56) 29.1667%, rgb(50, 216, 117) 100%);;
+
   }
-  
-  /* Example: Apply the hidden class when scrolling down and visible when scrolling up */
-  body.navbar-hidden .navbar {
-    transform: translateY(-100%);
+
+  p:hover{
+    cursor: pointer;
+animation: glow 2s infinite alternate;
   }
-  
-  body.navbar-visible .navbar {
-    transform: translateY(0);
+
+  @keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
   }
-  
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+  }
+}
+
